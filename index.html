@@ -1,629 +1,338 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dr. Andrew Chang | CV</title>
+<title>Dr. Andrew Chang | CV</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9fb;
-      color: #1f2933;
-      line-height: 1.6;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f8f9fb;
+  color: #1f2933;
+  line-height: 1.6;
+}
 
-    .topbar {
-      background: #000000;
-      color: #CFAE70;
-      padding: 14px 60px;
-      font-size: 15px;
-    }
+.topbar {
+  background: #000;
+  color: #CFAE70;
+  padding: 14px 60px;
+}
 
-    .header {
-      background: white;
-      padding: 28px 60px;
-      border-bottom: 1px solid #ddd;
-    }
+.header {
+  background: white;
+  padding: 28px 60px;
+  border-bottom: 1px solid #ddd;
+}
 
-    .header h1 {
-      margin: 0;
-      font-size: 30px;
-      color: #000;
-    }
+.header h1 {
+  margin: 0;
+  font-size: 30px;
+}
 
-    .nav {
-      margin-top: 18px;
-    }
+.hero {
+  background: #f3efe6;
+  padding: 50px 60px;
+}
 
-    .nav a {
-      margin-right: 22px;
-      color: #333;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-    }
+.hero h2 {
+  font-size: 42px;
+  margin: 8px 0;
+}
 
-    .nav a:hover {
-      color: #CFAE70;
-    }
+.hero p {
+  max-width: 800px;
+  font-size: 18px;
+}
 
-    .hero {
-      background: #f3efe6;
-      padding: 50px 60px;
-    }
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 16px;
+  margin-top: 28px;
+}
 
-    .hero h2 {
-      font-size: 42px;
-      margin: 8px 0;
-      color: #000;
-    }
+.stat {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+}
 
-    .hero p {
-      max-width: 850px;
-      font-size: 18px;
-      color: #444;
-    }
+.stat-number {
+  font-size: 30px;
+  font-weight: bold;
+}
 
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin-top: 28px;
-    }
+.page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
 
-    .stat {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-    }
+.top-grid, .two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 40px;
+}
 
-    .stat-number {
-      font-size: 32px;
-      font-weight: bold;
-      color: #000;
-    }
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 12px;
+  border-top: 5px solid #CFAE70;
+}
 
-    .stat-label {
-      font-size: 13px;
-      color: #777;
-    }
+.profile-photo {
+  width: 260px;
+  height: 320px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 12px;
+}
 
-    .page {
-      max-width: 1180px;
-      margin: 40px auto;
-      padding: 0 24px;
-    }
+h2 {
+  border-bottom: 2px solid #CFAE70;
+  padding-bottom: 6px;
+}
 
-    .top-grid,
-    .two-column-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-      margin-bottom: 40px;
-    }
+.contact-item {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
 
-    .profile-card,
-    .main-card {
-      background: white;
-      border-radius: 12px;
-      padding: 28px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      border-top: 5px solid #CFAE70;
-    }
+a {
+  color: #7A5C1E;
+  text-decoration: none;
+}
 
-    .profile-photo {
-      width: 260px;
-      height: 320px;
-      object-fit: cover;
-      object-position: center top;
-      border-radius: 12px;
-      margin-bottom: 20px;
-      max-width: 100%;
-    }
+a:hover {
+  text-decoration: underline;
+}
 
-    h2 {
-      border-bottom: 2px solid #CFAE70;
-      padding-bottom: 6px;
-      margin-top: 40px;
-      color: #000;
-    }
+.publication {
+  margin-bottom: 18px;
+}
 
-    .profile-card h2,
-    .main-card h2 {
-      margin-top: 0;
-      border-bottom: none;
-      padding-bottom: 0;
-    }
+.award {
+  color: #9A7611;
+  font-size: 14px;
+}
 
-    h3 {
-      margin-top: 20px;
-      color: #333;
-    }
+.timeline {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
 
-    a {
-      color: #7A5C1E;
-      text-decoration: none;
-    }
+.logo-box {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  background: #f7f3eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-    a:hover {
-      text-decoration: underline;
-    }
+.logo-box img {
+  max-width: 50px;
+  max-height: 50px;
+}
 
-    .small {
-      font-size: 14px;
-      color: #666;
-    }
+.year {
+  color: #9A7611;
+  font-weight: bold;
+}
 
-    .contact-item {
-      padding: 14px 0;
-      border-bottom: 1px solid #eee;
-    }
+details summary {
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: bold;
+}
 
-    .contact-item:last-child {
-      border-bottom: none;
-    }
+details summary::after {
+  content: "⌃";
+  float: right;
+}
 
-    .card {
-      border-left: 4px solid #CFAE70;
-      background: #fafafa;
-      padding: 18px 20px;
-      margin-bottom: 18px;
-      border-radius: 8px;
-    }
+details:not([open]) summary::after {
+  content: "⌄";
+}
 
-    .expertise-item {
-      padding: 14px 0;
-      border-bottom: 1px solid #eee;
-    }
+.aff-item {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 14px;
+  padding: 14px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
 
-    .expertise-item:last-child {
-      border-bottom: none;
-    }
+.aff-item:hover {
+  background: #fffaf0;
+}
 
-    .affiliation-item {
-      display: grid;
-      grid-template-columns: 82px 1fr;
-      gap: 16px;
-      align-items: center;
-      padding: 16px;
-      margin-bottom: 14px;
-      border: 1px solid #eee;
-      border-radius: 14px;
-      background: #fafafa;
-    }
+.aff-logo {
+  width: 60px;
+  height: 60px;
+  background: #f7f3eb;
+  border-radius: 12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
-    .affiliation-logo {
-      width: 66px;
-      height: 66px;
-      border-radius: 16px;
-      background: #f7f3eb;
-      color: #9A7611;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 14px;
-    }
+.aff-logo img {
+  max-width: 45px;
+  max-height: 45px;
+}
 
-    .affiliation-name {
-      font-weight: bold;
-      font-size: 17px;
-      color: #111;
-    }
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
 
-    .timeline-item {
-      display: grid;
-      grid-template-columns: 82px 1fr;
-      gap: 18px;
-      margin: 24px 0;
-      align-items: center;
-    }
-
-    .edu-logo-box {
-      width: 74px;
-      height: 74px;
-      border-radius: 18px;
-      background: #f7f3eb;
-      border: 1px solid #e5dccb;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-    }
-
-    .edu-logo {
-      max-width: 60px;
-      max-height: 60px;
-      object-fit: contain;
-    }
-
-    .year {
-      color: #9A7611;
-      font-weight: bold;
-      font-size: 14px;
-      letter-spacing: 0.5px;
-    }
-
-    .timeline-item h3 {
-      margin: 2px 0;
-      font-size: 22px;
-    }
-
-    .timeline-item p {
-      margin: 0;
-    }
-
-    .honor-item {
-      padding: 15px 0;
-      border-bottom: 1px solid #eee;
-    }
-
-    .honor-item:last-child {
-      border-bottom: none;
-    }
-
-    .publication {
-      margin-bottom: 22px;
-    }
-
-    .publication a {
-      margin-left: 6px;
-      font-size: 14px;
-    }
-
-    .award {
-      color: #9A7611;
-      font-size: 14px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      margin-top: 50px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #777;
-    }
-
-    @media (max-width: 900px) {
-      .top-grid,
-      .two-column-section,
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .topbar,
-      .header,
-      .hero {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-    }
-  </style>
+@media(max-width:900px){
+  .top-grid, .two-col, .stats {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <div class="topbar">
-  Vanderbilt University | Special Education
+Vanderbilt University | Special Education
 </div>
 
 <div class="header">
-  <h1>Dr. Andrew Chang</h1>
-  <div class="nav">
-    <a href="#news">News</a>
-    <a href="#expertise">Expertise</a>
-    <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#service">Service</a>
-    <a href="#skills">Skills</a>
-  </div>
+<h1>Dr. Andrew Chang</h1>
 </div>
 
 <section class="hero">
-  <h2>Dr. Andrew Chang</h2>
-  <p>
-    Special education researcher focused on language and literacy development,
-    reading interventions, and research synthesis to inform evidence-based instruction
-    for students with diverse learning needs.
-  </p>
+<h2>Dr. Andrew Chang</h2>
+<p>
+Special education researcher focusing on language and literacy development,
+reading interventions, and research synthesis.
+</p>
 
-  <div class="stats">
-    <div class="stat">
-      <div class="stat-number">5</div>
-      <div class="stat-label">Published Works</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">20</div>
-      <div class="stat-label">Presentations</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">6</div>
-      <div class="stat-label">Honors and Awards</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">4</div>
-      <div class="stat-label">Academic Teaching Roles</div>
-    </div>
-  </div>
+<div class="stats">
+<div class="stat"><div class="stat-number">5</div>Publications</div>
+<div class="stat"><div class="stat-number">20</div>Presentations</div>
+<div class="stat"><div class="stat-number">6</div>Awards</div>
+<div class="stat"><div class="stat-number">4</div>Teaching</div>
+</div>
 </section>
 
 <div class="page">
 
-  <section class="top-grid">
+<section class="top-grid">
 
-    <div class="profile-card">
-      <img src="profile.jpeg" alt="Dr. Andrew Chang" class="profile-photo">
+<div class="card">
+<img src="profile.jpeg" class="profile-photo">
+<h3>Dr. Andrew Chang</h3>
+<p>Ph.D. Special Education</p>
+<p>Vanderbilt University</p>
+</div>
 
-      <h3>Dr. Andrew Chang</h3>
-      <p>Ph.D. in Special Education</p>
-      <p class="small">Minor: Quantitative Methods</p>
+<div class="card">
+<h2>Contact</h2>
+<div class="contact-item"><a href="mailto:andrew.e.chang@vanderbilt.edu">Email</a></div>
+<div class="contact-item"><a href="https://scholar.google.com/citations?user=6yqKw8sAAAAJ" target="_blank">Google Scholar</a></div>
+<div class="contact-item"><a href="https://orcid.org/0009-0003-1441-1310" target="_blank">ORCID</a></div>
+</div>
 
-      <p class="small">
-        Department of Special Education<br>
-        Vanderbilt University
-      </p>
-    </div>
+</section>
 
-    <div class="profile-card">
-      <h2>Contact</h2>
+<h2>Publications</h2>
 
-      <div class="contact-item">
-        <a href="mailto:andrew.e.chang@vanderbilt.edu">andrew.e.chang@vanderbilt.edu</a>
-      </div>
+<div class="publication">
+Wanzek & <strong>Chang</strong> (2025).
+<a href="https://doi.org/10.1111/mbe.70015" target="_blank">[Link]</a>
+</div>
 
-      <div class="contact-item">
-        <a href="https://scholar.google.com/citations?user=6yqKw8sAAAAJ&hl=ko&oi=sra" target="_blank">Google Scholar</a>
-      </div>
+<div class="publication">
+<strong>Chang</strong> et al. (2025).
+<a href="https://doi.org/10.1007/s10648-025-09997-z" target="_blank">[Link]</a>
+<br><span class="award">Award-winning paper</span>
+</div>
 
-      <div class="contact-item">
-        <a href="https://orcid.org/0009-0003-1441-1310" target="_blank">ORCID</a>
-      </div>
+<h2>In the News</h2>
 
-      <div class="contact-item">
-        <a href="https://docs.google.com/document/d/1SnRq2FIS5XxKJ90xukAr3j_sYwLCX4vDQIRjLiiCK5g/edit" target="_blank">Curriculum Vitae</a>
-      </div>
-    </div>
+<div class="publication">
+Tech & Learning —
+<a href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">[Read]</a>
+</div>
 
-  </section>
+<div class="two-col">
 
-  <section id="news">
-    <h2>News</h2>
+<div class="card">
+<details open>
+<summary>Affiliations</summary>
 
-    <div class="card">
-      <strong>Featured in Tech & Learning</strong><br>
-      Cross-age tutoring highlighted as an approach where student tutors learn by teaching others.<br>
-      <a href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">Read the article</a>
-    </div>
-  </section>
+<a class="aff-item" href="https://www.aera.net/" target="_blank">
+<div class="aff-logo"><img src="aera.jpeg"></div>
+<div>AERA</div>
+</a>
 
-  <section class="two-column-section" id="expertise">
+<a class="aff-item" href="https://acedhh.com/" target="_blank">
+<div class="aff-logo"><img src="acedhh.webp"></div>
+<div>ACE-DHH</div>
+</a>
 
-    <div class="profile-card">
-      <h2>Research Expertise</h2>
+<a class="aff-item" href="https://exceptionalchildren.org/" target="_blank">
+<div class="aff-logo"><img src="cec.png"></div>
+<div>CEC</div>
+</a>
 
-      <div class="expertise-item">Language and literacy development</div>
-      <div class="expertise-item">Reading instruction and intervention</div>
-      <div class="expertise-item">Culturally and linguistically responsive literacy</div>
-      <div class="expertise-item">Teacher preparation and clinical practice</div>
-      <div class="expertise-item">Evidence-based practices</div>
-      <div class="expertise-item">Meta-analysis and research synthesis</div>
-    </div>
+<a class="aff-item" href="https://www.srsm.org/" target="_blank">
+<div class="aff-logo"><img src="srsm.png"></div>
+<div>SRSM</div>
+</a>
 
-    <div class="profile-card">
-      <h2>Affiliations</h2>
+<a class="aff-item" href="https://www.sree.org/" target="_blank">
+<div class="aff-logo"><img src="sree.webp"></div>
+<div>SREE</div>
+</a>
 
-      <div class="affiliation-item">
-        <div class="affiliation-logo">AERA</div>
-        <div>
-          <div class="affiliation-name">American Educational Research Association</div>
-          <div class="small">Division C: Learning and Instruction</div>
-        </div>
-      </div>
+<a class="aff-item" href="https://kaera.org/" target="_blank">
+<div class="aff-logo"><img src="kaera.png"></div>
+<div>KAERA</div>
+</a>
 
-      <div class="affiliation-item">
-        <div class="affiliation-logo">ACE-DHH</div>
-        <div>
-          <div class="affiliation-name">American College Educators for Deaf and Hard of Hearing</div>
-          <div class="small">Professional Association</div>
-        </div>
-      </div>
+</details>
+</div>
 
-      <div class="affiliation-item">
-        <div class="affiliation-logo">CEC</div>
-        <div>
-          <div class="affiliation-name">Council for Exceptional Children</div>
-          <div class="small">Professional Association</div>
-        </div>
-      </div>
+<div class="card">
+<h2>Education</h2>
 
-      <div class="affiliation-item">
-        <div class="affiliation-logo">SRSM</div>
-        <div>
-          <div class="affiliation-name">Society for Research Synthesis Methodology</div>
-          <div class="small">Scholarly Society</div>
-        </div>
-      </div>
+<div class="timeline">
+<div class="logo-box"><img src="vanderbilt.png"></div>
+<div><div class="year">2022-2026</div>PhD Vanderbilt</div>
+</div>
 
-      <div class="affiliation-item">
-        <div class="affiliation-logo">KAERA</div>
-        <div>
-          <div class="affiliation-name">Korean-American Educational Researchers Association</div>
-          <div class="small">Scholarly Association</div>
-        </div>
-      </div>
+<div class="timeline">
+<div class="logo-box"><img src="umn.png"></div>
+<div><div class="year">2020-2022</div>MA Minnesota</div>
+</div>
 
-      <div class="affiliation-item">
-        <div class="affiliation-logo">SREE</div>
-        <div>
-          <div class="affiliation-name">Society for Research on Educational Effectiveness</div>
-          <div class="small">Research Society</div>
-        </div>
-      </div>
+<div class="timeline">
+<div class="logo-box"><img src="kookmin.svg"></div>
+<div><div class="year">2014-2020</div>BA Kookmin</div>
+</div>
 
-    </div>
+</div>
 
-  </section>
+</div>
 
-  <section class="two-column-section" id="education">
-
-    <div class="profile-card">
-      <h2>Education and Academic Training</h2>
-
-      <div class="timeline-item">
-        <div class="edu-logo-box">
-          <img src="vanderbilt.png" alt="Vanderbilt University" class="edu-logo">
-        </div>
-        <div>
-          <div class="year">2022-2026</div>
-          <h3>Ph.D.</h3>
-          <p>Special Education, Vanderbilt University</p>
-          <p class="small">Minor: Quantitative Methods | Advisor: Dr. Jeanne Wanzek</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="edu-logo-box">
-          <img src="umn.png" alt="University of Minnesota" class="edu-logo">
-        </div>
-        <div>
-          <div class="year">2020-2022</div>
-          <h3>M.A.</h3>
-          <p>Educational Psychology, University of Minnesota</p>
-          <p class="small">Special Education | Advisor: Dr. Debbie Golos</p>
-        </div>
-      </div>
-
-      <div class="timeline-item">
-        <div class="edu-logo-box">
-          <img src="kookmin.svg" alt="Kookmin University" class="edu-logo">
-        </div>
-        <div>
-          <div class="year">2014-2020</div>
-          <h3>B.A.</h3>
-          <p>Education, Kookmin University</p>
-          <p class="small">Joint Major: Morality and Ethics</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="profile-card">
-      <h2>Selected Honors</h2>
-
-      <div class="honor-item">
-        Melvyn I. Semmel Dissertation Research Award, Vanderbilt University (2026)
-      </div>
-
-      <div class="honor-item">
-        Taylor & Francis Award, Society for the Scientific Study of Reading (2025)
-      </div>
-
-      <div class="honor-item">
-        Robert Gaylord-Ross Award, Department of Special Education, Vanderbilt University (2025)
-      </div>
-
-      <div class="honor-item">
-        Michael B. Salwen Scholarship, Korean-American Educational Researchers Association (2025)
-      </div>
-
-      <div class="honor-item">
-        Meta-Analysis Student Research Award, Council for Exceptional Children Division for Research (2025)
-      </div>
-
-      <div class="honor-item">
-        Peabody College Fellowship, Vanderbilt University (2022-2026)
-      </div>
-    </div>
-
-  </section>
-
-  <section id="publications">
-    <h2>Publications</h2>
-
-    <div class="publication">
-      Wanzek, J., & <strong>Chang, A.</strong> (2025). Exploring intensity in reading interventions for upper elementary students. <em>Mind, Brain and Education</em>.
-      <a href="https://doi.org/10.1111/mbe.70015" target="_blank">[Link]</a>
-    </div>
-
-    <div class="publication">
-      <strong>Chang, A.</strong>, Mauer, E., Wanzek, J., Kim, S., Scammacca, N., & Swanson, E. (2025). Meta-analysis: Examining the academic effects of cross-age tutoring. <em>Educational Psychology Review, 37</em>(19), 1–20.
-      <a href="https://doi.org/10.1007/s10648-025-09997-z" target="_blank">[Link]</a>
-      <br>
-      <span class="award">Award-winning paper</span>
-    </div>
-
-    <div class="publication">
-      <strong>Chang, A.</strong>, & Golos, D. (2025). Portrayal of deaf characters in Korean movies. <em>Journal of Deaf Studies and Deaf Education, 30</em>(3), 372–383.
-      <a href="https://doi.org/10.1093/jdsade/enaf003" target="_blank">[Link]</a>
-    </div>
-
-    <div class="publication">
-      <strong>Chang, A.</strong>, & Mauer, E. (2024). Five recommendations to implementing cross-age tutoring in reading. <em>The Reading Teacher, 78</em>(2), 113–120.
-      <a href="https://doi.org/10.1002/trtr.2351" target="_blank">[Link]</a>
-    </div>
-
-    <div class="publication">
-      <strong>Chang, A.</strong>, Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five evidence-based keys to implementing cross-age tutoring</em>. Dallas, TX: Meadows Foundation.
-      <a href="https://meadowscenter.org/resource/five-evidence-based-keys-to-implementing-cross-age-tutoring/" target="_blank">[Link]</a>
-    </div>
-
-  </section>
-
-  <section id="teaching">
-    <h2>Teaching</h2>
-
-    <div class="card">
-      <strong>Applied Meta-Analysis</strong><br>
-      Vanderbilt University<br>
-      <span class="small">Co-instructor and Teaching Assistant | PhD-level</span>
-    </div>
-
-    <div class="card">
-      <strong>Teaching Reading to Students with Severe and Persistent Academic and Behavioral Difficulties</strong><br>
-      Vanderbilt University<br>
-      <span class="small">Co-instructor | Master’s-level</span>
-    </div>
-
-    <div class="card">
-      <strong>Introduction to Educational Statistics</strong><br>
-      Kookmin University<br>
-      <span class="small">Teaching Assistant | Undergraduate-level</span>
-    </div>
-
-  </section>
-
-  <section id="service">
-    <h2>Service</h2>
-
-    <ul>
-      <li>President, Korean Researchers in Special Education (2025-Present)</li>
-      <li>Student Representative, KAERA (2024-Present)</li>
-      <li>DEIAJ Committee Member, DCD-CEC (2024-Present)</li>
-      <li>EDI Chair, SPED Graduate Student Association (2024-2025)</li>
-    </ul>
-
-  </section>
-
-  <section id="skills">
-    <h2>Skills</h2>
-
-    <ul>
-      <li>R, SPSS, SAS, Stata, Mplus, LISREL, JASP</li>
-      <li>NVivo, Trint</li>
-      <li>ASReviewer</li>
-      <li>Academic writing, data analysis, project management</li>
-    </ul>
-
-  </section>
-
-  <footer>
-    Dr. Andrew Chang | Vanderbilt University
-  </footer>
+<footer>
+Dr. Andrew Chang
+</footer>
 
 </div>
 
