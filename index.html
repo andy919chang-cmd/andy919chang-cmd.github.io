@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Dr. Andrew Chang | CV</title>
+  <title>Dr. Andrew Chang | Research Profile</title>
 
   <style>
     body {
@@ -155,6 +155,13 @@
       color: #666;
     }
 
+    .profile-tagline {
+      font-size: 16px;
+      color: #444;
+      margin-top: 12px;
+      margin-bottom: 18px;
+    }
+
     .contact-item {
       padding: 12px 0;
       border-bottom: 1px solid #eee;
@@ -162,6 +169,15 @@
 
     .contact-item:last-child {
       border-bottom: none;
+    }
+
+    .quick-note {
+      margin-top: 26px;
+      padding: 16px;
+      background: #f7f3eb;
+      border-left: 4px solid #CFAE70;
+      border-radius: 8px;
+      color: #444;
     }
 
     .card {
@@ -232,18 +248,13 @@
       height: 66px;
       border-radius: 16px;
       background: #f7f3eb;
+      color: #9A7611;
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
+      font-weight: bold;
+      font-size: 14px;
       flex-shrink: 0;
-    }
-
-    .affiliation-logo img {
-      width: 54px;
-      height: 54px;
-      object-fit: contain;
-      display: block;
     }
 
     .affiliation-name {
@@ -388,10 +399,11 @@
   <div class="nav">
     <a href="#expertise">Expertise</a>
     <a href="#education">Education</a>
-    <a href="#publications">Publications</a>
     <a href="#news">News</a>
+    <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
     <a href="#service">Service</a>
+    <a href="#affiliations">Affiliations</a>
     <a href="#skills">Skills</a>
   </div>
 </div>
@@ -431,6 +443,9 @@
       <img src="./profile.jpeg" alt="Dr. Andrew Chang" class="profile-photo">
 
       <h3>Dr. Andrew Chang</h3>
+      <p class="profile-tagline">
+        Language and Literacy Development | Reading Intervention | Research Synthesis
+      </p>
       <p class="small">Ph.D. in Special Education | Quantitative Methods Minor</p>
       <p class="small">
         Department of Special Education<br>
@@ -456,6 +471,10 @@
       <div class="contact-item">
         <a href="https://docs.google.com/document/d/1SnRq2FIS5XxKJ90xukAr3j_sYwLCX4vDQIRjLiiCK5g/edit" target="_blank">Curriculum Vitae</a>
       </div>
+
+      <div class="quick-note">
+        Ph.D. in Special Education from Vanderbilt University, with a quantitative methods minor and research focused on language, literacy, intervention, and evidence synthesis.
+      </div>
     </div>
   </section>
 
@@ -471,11 +490,11 @@
       <div class="expertise-item">Meta-analysis and research synthesis</div>
     </div>
 
-    <details class="profile-card" open>
-      <summary>Affiliations</summary>
+    <div class="profile-card" id="affiliations">
+      <h2>Affiliations</h2>
 
       <a class="affiliation-item" href="https://www.aera.net/" target="_blank">
-        <div class="affiliation-logo"><img src="./aera.jpeg" alt="AERA logo"></div>
+        <div class="affiliation-logo">AERA</div>
         <div>
           <div class="affiliation-name">American Educational Research Association</div>
           <div class="small">Division C: Learning and Instruction</div>
@@ -483,7 +502,7 @@
       </a>
 
       <a class="affiliation-item" href="https://acedhh.com/" target="_blank">
-        <div class="affiliation-logo"><img src="./acedhh.webp" alt="ACE-DHH logo"></div>
+        <div class="affiliation-logo">ACE-DHH</div>
         <div>
           <div class="affiliation-name">American College Educators for Deaf and Hard of Hearing</div>
           <div class="small">Professional Association</div>
@@ -491,7 +510,7 @@
       </a>
 
       <a class="affiliation-item" href="https://exceptionalchildren.org/" target="_blank">
-        <div class="affiliation-logo"><img src="./cec.png" alt="CEC logo"></div>
+        <div class="affiliation-logo">CEC</div>
         <div>
           <div class="affiliation-name">Council for Exceptional Children</div>
           <div class="small">Professional Association</div>
@@ -499,7 +518,7 @@
       </a>
 
       <a class="affiliation-item" href="https://www.srsm.org/" target="_blank">
-        <div class="affiliation-logo"><img src="./srsm.png" alt="SRSM logo"></div>
+        <div class="affiliation-logo">SRSM</div>
         <div>
           <div class="affiliation-name">Society for Research Synthesis Methodology</div>
           <div class="small">Scholarly Society</div>
@@ -507,7 +526,7 @@
       </a>
 
       <a class="affiliation-item" href="https://kaera.org/" target="_blank">
-        <div class="affiliation-logo"><img src="./kaera.png" alt="KAERA logo"></div>
+        <div class="affiliation-logo">KAERA</div>
         <div>
           <div class="affiliation-name">Korean-American Educational Researchers Association</div>
           <div class="small">Scholarly Association</div>
@@ -515,13 +534,13 @@
       </a>
 
       <a class="affiliation-item" href="https://www.sree.org/" target="_blank">
-        <div class="affiliation-logo"><img src="./sree.webp" alt="SREE logo"></div>
+        <div class="affiliation-logo">SREE</div>
         <div>
           <div class="affiliation-name">Society for Research on Educational Effectiveness</div>
           <div class="small">Research Society</div>
         </div>
       </a>
-    </details>
+    </div>
   </section>
 
   <section class="two-column-section" id="education">
@@ -577,6 +596,20 @@
     </div>
   </section>
 
+  <section id="news">
+    <h2>In the News</h2>
+
+    <a class="news-card" href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">
+      <div class="news-source">Tech & Learning</div>
+      <h3>Cross-Age Tutoring: Student Tutors Teach Others and Themselves</h3>
+      <p>
+        A feature article highlighting how cross-age tutoring can support younger students
+        while also helping student tutors deepen their own learning.
+      </p>
+      <span>Read article →</span>
+    </a>
+  </section>
+
   <section id="publications">
     <h2>Publications</h2>
 
@@ -605,20 +638,6 @@
       <strong>Chang, A.</strong>, Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five evidence-based keys to implementing cross-age tutoring</em>. Dallas, TX: Meadows Foundation.
       <a href="https://meadowscenter.org/resource/five-evidence-based-keys-to-implementing-cross-age-tutoring/" target="_blank">[Link]</a>
     </div>
-  </section>
-
-  <section id="news">
-    <h2>In the News</h2>
-
-    <a class="news-card" href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">
-      <div class="news-source">Tech & Learning</div>
-      <h3>Cross-Age Tutoring: Student Tutors Teach Others and Themselves</h3>
-      <p>
-        A feature article highlighting how cross-age tutoring can support younger students
-        while also helping student tutors deepen their own learning.
-      </p>
-      <span>Read article →</span>
-    </a>
   </section>
 
   <section id="teaching">
