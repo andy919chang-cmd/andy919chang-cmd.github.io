@@ -130,6 +130,34 @@
       color: #000;
     }
 
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      margin-top: 40px;
+      border-bottom: 2px solid #CFAE70;
+    }
+
+    .section-header h2 {
+      margin-top: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+      flex: 1;
+    }
+
+    .toggle-icon {
+      color: #9A7611;
+      font-size: 22px;
+      font-weight: bold;
+      padding-bottom: 6px;
+      margin-left: 16px;
+    }
+
+    .collapsible-content {
+      margin-top: 20px;
+    }
+
     .profile-card h2 {
       margin-top: 0;
       border-bottom: none;
@@ -343,6 +371,51 @@
       color: #777;
     }
 
+    .collapsible-section {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.collapsible-section summary {
+  list-style: none;
+  cursor: pointer;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  border-bottom: 2px solid #CFAE70;
+  padding-bottom: 6px;
+}
+
+.collapsible-section summary::-webkit-details-marker {
+  display: none;
+}
+
+.collapsible-section summary::after {
+  content: "⌃";
+  float: right;
+  color: #9A7611;
+}
+
+.collapsible-section:not([open]) summary::after {
+  content: "⌄";
+}
+
+.collapsible-section > *:not(summary) {
+  margin-top: 20px;
+}
+
+.award-badge {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #7A5C1E;
+  background: #f7f3eb;
+  border: 1px solid #CFAE70;
+  border-radius: 20px;
+}
+
     .profile-card,
     .card,
     .news-card,
@@ -388,7 +461,7 @@
     }
   </style>
 </head>
-
+  
 <body>
 
 <div class="topbar">
@@ -402,7 +475,6 @@
     <a href="#education">Education</a>
     <a href="#news">News</a>
     <a href="#publications">Publications</a>
-    <a href="#metrics">Metrics</a>
     <a href="#teaching">Teaching</a>
     <a href="#service">Service</a>
     <a href="#skills">Skills</a>
@@ -524,70 +596,71 @@
     </div>
   </section>
 
-  <details open id="news">
-  <summary>In the News</summary>
-  <a class="news-card" href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">
-    <div class="news-source">Tech & Learning</div>
-    <h3>Cross-Age Tutoring: Student Tutors Teach Others and Themselves</h3>
-    <p>
-      A feature article highlighting how cross-age tutoring can support younger students
-      while also helping student tutors deepen their own learning.
-    </p>
-    <span>Read article →</span>
-  </a>
-</details>
+  <details class="collapsible-section" open id="news">
+    <summary>In the News</summary>
 
-  <details open id="publications">
-  <summary>Publications</summary>
+    <a class="news-card" href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">
+      <div class="news-source">Tech & Learning</div>
+      <h3>Cross-Age Tutoring: Student Tutors Teach Others and Themselves</h3>
+      <p>
+        A feature article highlighting how cross-age tutoring can support younger students
+        while also helping student tutors deepen their own learning.
+      </p>
+      <span>Read article →</span>
+    </a>
+  </details>
 
-  <div class="publication">
-    Wanzek, J., & <strong>Chang, A.</strong> (2025). Exploring intensity in reading interventions for upper elementary students. <em>Mind, Brain and Education, 19</em>(4), 326-334.
-    <a href="https://doi.org/10.1111/mbe.70015" target="_blank">[Link]</a>
-  </div>
+  <details class="collapsible-section" open id="publications">
+    <summary>Publications</summary>
 
-  <div class="publication">
-    <strong>Chang, A.</strong>, Mauer, E., Wanzek, J., Kim, S., Scammacca, N., & Swanson, E. (2025). Meta-analysis: Examining the academic effects of cross-age tutoring. <em>Educational Psychology Review, 37</em>(19), 1–20.
-    <a href="https://doi.org/10.1007/s10648-025-09997-z" target="_blank">[Link]</a><br>
-    <span class="award">Award-winning paper</span>
-  </div>
+    <div class="publication">
+      Wanzek, J., & <strong>Chang, A.</strong> (2025). Exploring intensity in reading interventions for upper elementary students. <em>Mind, Brain and Education, 19</em>(4), 326-334.
+      <a href="https://doi.org/10.1111/mbe.70015" target="_blank">[Link]</a>
+    </div>
 
-  <div class="publication">
-    <strong>Chang, A.</strong>, & Golos, D. (2025). Portrayal of deaf characters in Korean movies. <em>Journal of Deaf Studies and Deaf Education, 30</em>(3), 372–383.
-    <a href="https://doi.org/10.1093/jdsade/enaf003" target="_blank">[Link]</a>
-  </div>
+    <div class="publication">
+      <strong>Chang, A.</strong>, Mauer, E., Wanzek, J., Kim, S., Scammacca, N., & Swanson, E. (2025). Meta-analysis: Examining the academic effects of cross-age tutoring. <em>Educational Psychology Review, 37</em>(19), 1–20.
+      <a href="https://doi.org/10.1007/s10648-025-09997-z" target="_blank">[Link]</a><br>
+      <span class="award-badge">Award-winning paper</span>
+    </div>
 
-  <div class="publication">
-    <strong>Chang, A.</strong>, & Mauer, E. (2024). Five recommendations to implementing cross-age tutoring in reading. <em>The Reading Teacher, 78</em>(2), 113–120.
-    <a href="https://doi.org/10.1002/trtr.2351" target="_blank">[Link]</a>
-  </div>
+    <div class="publication">
+      <strong>Chang, A.</strong>, & Golos, D. (2025). Portrayal of deaf characters in Korean movies. <em>Journal of Deaf Studies and Deaf Education, 30</em>(3), 372–383.
+      <a href="https://doi.org/10.1093/jdsade/enaf003" target="_blank">[Link]</a>
+    </div>
 
-  <div class="publication">
-    <strong>Chang, A.</strong>, Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five evidence-based keys to implementing cross-age tutoring</em>. Dallas, TX: Meadows Foundation.
-    <a href="https://meadowscenter.org/resource/five-evidence-based-keys-to-implementing-cross-age-tutoring/" target="_blank">[Link]</a>
-  </div>
-</details>
-  
-  <details open id="teaching">
-  <summary>Teaching</summary>
+    <div class="publication">
+      <strong>Chang, A.</strong>, & Mauer, E. (2024). Five recommendations to implementing cross-age tutoring in reading. <em>The Reading Teacher, 78</em>(2), 113–120.
+      <a href="https://doi.org/10.1002/trtr.2351" target="_blank">[Link]</a>
+    </div>
 
-  <div class="card">
-    <strong>Applied Meta-Analysis</strong><br>
-    Vanderbilt University<br>
-    <span class="small">Co-instructor and Teaching Assistant | PhD-level</span>
-  </div>
+    <div class="publication">
+      <strong>Chang, A.</strong>, Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five evidence-based keys to implementing cross-age tutoring</em>. Dallas, TX: Meadows Foundation.
+      <a href="https://meadowscenter.org/resource/five-evidence-based-keys-to-implementing-cross-age-tutoring/" target="_blank">[Link]</a>
+    </div>
+  </details>
 
-  <div class="card">
-    <strong>Teaching Reading to Students with Severe and Persistent Academic and Behavioral Difficulties</strong><br>
-    Vanderbilt University<br>
-    <span class="small">Co-instructor | Master’s-level</span>
-  </div>
+  <details class="collapsible-section" open id="teaching">
+    <summary>Teaching</summary>
 
-  <div class="card">
-    <strong>Introduction to Educational Statistics</strong><br>
-    Kookmin University<br>
-    <span class="small">Teaching Assistant | Undergraduate-level</span>
-  </div>
-</details>
+    <div class="card">
+      <strong>Applied Meta-Analysis</strong><br>
+      Vanderbilt University<br>
+      <span class="small">Co-instructor and Teaching Assistant | PhD-level</span>
+    </div>
+
+    <div class="card">
+      <strong>Teaching Reading to Students with Severe and Persistent Academic and Behavioral Difficulties</strong><br>
+      Vanderbilt University<br>
+      <span class="small">Co-instructor | Master’s-level</span>
+    </div>
+
+    <div class="card">
+      <strong>Introduction to Educational Statistics</strong><br>
+      Kookmin University<br>
+      <span class="small">Teaching Assistant | Undergraduate-level</span>
+    </div>
+  </details>
 
   <section id="service">
     <h2>Service</h2>
@@ -618,9 +691,9 @@
       <a href="https://acedhh.com/" target="_blank">ACE-DHH</a>
       <a href="https://www.aera.net/" target="_blank">AERA</a>
       <a href="https://exceptionalchildren.org/" target="_blank">CEC</a>
+      <a href="https://kaera.org/" target="_blank">KAERA</a>
       <a href="https://www.sree.org/" target="_blank">SREE</a>
       <a href="https://www.srsm.org/" target="_blank">SRSM</a>
-      <a href="https://kaera.org/" target="_blank">KAERA</a>
     </div>
   </section>
 
