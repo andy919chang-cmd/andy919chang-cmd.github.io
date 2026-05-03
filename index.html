@@ -452,27 +452,36 @@
   gap: 20px;
 }
 
-    @media (max-width: 900px) {
-      .top-grid,
-      .two-column-section,
-      .stats,
-      .scholar-metrics {
-        grid-template-columns: 1fr;
-      }
-
-      @media (max-width: 768px) {
-  .featured-grid {
+@media (max-width: 900px) {
+  .top-grid,
+  .two-column-section,
+  .stats,
+  .scholar-metrics {
     grid-template-columns: 1fr;
+  }
+
+  .topbar,
+  .header,
+  .hero {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
-      .topbar,
-      .header,
-      .hero {
-        padding-left: 24px;
-        padding-right: 24px;
-      }
-    }
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}
   </style>
 </head>
   
