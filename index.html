@@ -2,255 +2,304 @@
 <html>
 <head>
   <title>Andrew Chang | Research Profile</title>
-
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #f7f8fb;
-      color: #1f2933;
+      font-family: Arial, sans-serif;
+      background: #f6f7f9;
+      color: #222;
       line-height: 1.6;
     }
 
-    .topbar {
-      background-color: #102a43;
+    .university-bar {
+      background: #1c1f2a;
       color: white;
-      padding: 18px 48px;
+      padding: 14px 60px;
       font-size: 15px;
-      letter-spacing: 0.3px;
+    }
+
+    .header {
+      background: white;
+      padding: 28px 60px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #1c1f2a;
     }
 
     .nav {
-      background-color: white;
-      padding: 14px 48px;
-      border-bottom: 1px solid #e5e7eb;
-      position: sticky;
-      top: 0;
+      margin-top: 18px;
     }
 
     .nav a {
-      display: inline-block;
       margin-right: 22px;
-      color: #102a43;
+      color: #374151;
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
     }
 
+    .hero {
+      background: #eef1f5;
+      padding: 50px 60px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .hero .label {
+      color: #6b7280;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    .hero h2 {
+      font-size: 42px;
+      margin: 10px 0;
+      color: #111827;
+    }
+
+    .hero p {
+      max-width: 850px;
+      font-size: 18px;
+      color: #374151;
+    }
+
+    .hero-buttons a {
+      display: inline-block;
+      margin-right: 10px;
+      margin-top: 12px;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      background: #1c1f2a;
+      color: white;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
     .container {
-      display: flex;
-      max-width: 1150px;
-      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 310px 1fr;
       gap: 36px;
+      max-width: 1180px;
+      margin: 40px auto;
       padding: 0 24px;
     }
 
+    .sidebar, .main {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
     .sidebar {
-      width: 300px;
-      background-color: white;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(16, 42, 67, 0.08);
+      padding: 28px;
       height: fit-content;
     }
 
     .main {
-      flex: 1;
-      background-color: white;
-      padding: 42px;
-      border-radius: 18px;
-      box-shadow: 0 10px 30px rgba(16, 42, 67, 0.08);
+      padding: 38px;
     }
 
     img {
       width: 190px;
       height: 190px;
       object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid #d9e2ec;
-    }
-
-    h1 {
-      font-size: 38px;
-      margin: 0 0 8px 0;
-      color: #102a43;
-    }
-
-    h2 {
-      margin-top: 42px;
-      color: #102a43;
-      border-bottom: 2px solid #d9e2ec;
-      padding-bottom: 8px;
-    }
-
-    h3 {
-      color: #334e68;
-      margin-bottom: 6px;
-    }
-
-    .subtitle {
-      color: #52606d;
-      font-size: 18px;
+      border-radius: 12px;
+      display: block;
       margin-bottom: 22px;
     }
 
-    .tagline {
-      background-color: #eef4ff;
-      color: #243b53;
-      padding: 16px 18px;
-      border-left: 4px solid #3b82f6;
-      border-radius: 10px;
-      margin: 24px 0;
+    h2 {
+      color: #111827;
+      margin-top: 40px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid #e5e7eb;
     }
 
-    .button {
-      display: inline-block;
-      background-color: #102a43;
-      color: white;
-      padding: 10px 16px;
-      border-radius: 8px;
-      text-decoration: none;
-      margin-right: 10px;
-      margin-top: 8px;
-      font-size: 14px;
+    h3 {
+      color: #1f2937;
+      margin-bottom: 6px;
     }
 
     .sidebar a {
-      color: #1d4ed8;
-      text-decoration: none;
       display: block;
+      color: #2563eb;
+      text-decoration: none;
       margin-bottom: 8px;
     }
 
     .small {
-      color: #627d98;
       font-size: 14px;
+      color: #6b7280;
     }
 
     .card {
-      border: 1px solid #e5e7eb;
-      padding: 18px;
-      border-radius: 12px;
-      margin-bottom: 16px;
-      background-color: #fbfdff;
+      border-left: 4px solid #334155;
+      background: #f8fafc;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      border-radius: 8px;
     }
 
     ul {
       padding-left: 22px;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
-<div class="topbar">
-  Vanderbilt University | Special Education | Language and Literacy Research
-</div>
-
-<div class="nav">
-  <a href="#overview">Overview</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#teaching">Teaching</a>
-  <a href="#cv">CV</a>
-  <a href="#contact">Contact</a>
-</div>
-
-<div class="container">
-
-  <div class="sidebar">
-    <img src="profile.jpeg" alt="Andrew Chang">
-
-    <h3>Andrew Chang</h3>
-    <p class="small">Ph.D. in Special Education</p>
-    <p class="small">Vanderbilt University</p>
-
-    <h3>Contact</h3>
-    <a href="mailto:andrew.e.chang@vanderbilt.edu">andrew.e.chang@vanderbilt.edu</a>
-    <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
-    <a href="#" target="_blank">ORCID</a>
-    <a href="#" target="_blank">CV</a>
-
-    <h3>Research Expertise</h3>
-    <ul class="small">
-      <li>Language and literacy development</li>
-      <li>Reading interventions</li>
-      <li>Students with disabilities</li>
-      <li>Meta-analysis and research synthesis</li>
-      <li>Evidence-based practice</li>
-    </ul>
+  <div class="university-bar">
+    Vanderbilt University | Department of Special Education
   </div>
 
-  <div class="main">
+  <div class="header">
+    <h1>Andrew Chang | Research Profile</h1>
+    <div class="nav">
+      <a href="#overview">Overview</a>
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+      <a href="#cv">CV</a>
+    </div>
+  </div>
 
-    <section id="overview">
-      <p class="small">Language and Literacy Development | Reading Intervention | Meta-Analysis</p>
-      <h1>Andrew Chang</h1>
-      <p class="subtitle">Researcher in special education, language and literacy development, and evidence-based instructional practice.</p>
+  <section class="hero" id="overview">
+    <div class="label">Language and Literacy Development | Special Education</div>
+    <h2>Andrew Chang</h2>
+    <p>
+      Ph.D. in Special Education. My research focuses on language and literacy development,
+      reading interventions, meta-analysis, and evidence-based instructional practices for students
+      with disabilities and students who need additional academic support.
+    </p>
+    <div class="hero-buttons">
+      <a href="mailto:andrew.e.chang@vanderbilt.edu">Contact</a>
+      <a href="#cv">Curriculum Vitae</a>
+    </div>
+  </section>
 
-      <div class="tagline">
-        My work focuses on understanding how language, literacy, and instructional supports shape academic outcomes for students with disabilities and students who need additional support in school-based settings.
-      </div>
+  <div class="container">
 
-      <a class="button" href="mailto:andrew.e.chang@vanderbilt.edu">Contact</a>
-      <a class="button" href="#" target="_blank">Curriculum Vitae</a>
-    </section>
+    <aside class="sidebar">
+      <img src="profile.jpeg" alt="Andrew Chang">
 
-    <section id="research">
-      <h2>Research</h2>
+      <h3>Andrew Chang</h3>
+      <p class="small">Ph.D. in Special Education</p>
+      <p class="small">Vanderbilt University</p>
 
-      <div class="card">
-        <h3>Language and Literacy Development</h3>
-        <p>I study early language and literacy skills as foundations for later academic achievement, with particular attention to reading development and school-based assessment.</p>
-      </div>
+      <h3>Contact</h3>
+      <a href="mailto:andrew.e.chang@vanderbilt.edu">andrew.e.chang@vanderbilt.edu</a>
+      <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
+      <a href="#" target="_blank">ORCID</a>
+      <a href="#cv">Curriculum Vitae</a>
 
-      <div class="card">
-        <h3>Reading Intervention</h3>
-        <p>My work examines reading interventions, implementation, and instructional supports for students with persistent academic difficulties.</p>
-      </div>
-
-      <div class="card">
-        <h3>Research Synthesis</h3>
-        <p>I use meta-analysis and systematic review methods to synthesize evidence and connect research findings to educational practice.</p>
-      </div>
-    </section>
-
-    <section id="publications">
-      <h2>Publications</h2>
-
-      <div class="card">
-        <p><strong>Chang, A., & Mauer, E.</strong> (2024). Five recommendations to implementing cross-age tutoring in reading. <em>The Reading Teacher</em>.</p>
-      </div>
-
-      <div class="card">
-        <p>More publications coming soon.</p>
-      </div>
-    </section>
-
-    <section id="teaching">
-      <h2>Teaching</h2>
-      <ul>
-        <li>Teaching Reading to Students with Severe and Persistent Academic and Behavioral Difficulties</li>
-        <li>Applied Meta-Analysis</li>
-        <li>Educational Statistics</li>
+      <h3>Research Expertise</h3>
+      <ul class="small">
+        <li>Language and literacy development</li>
+        <li>Reading interventions</li>
+        <li>Students with disabilities</li>
+        <li>Meta-analysis</li>
+        <li>Research synthesis</li>
       </ul>
-    </section>
 
-    <section id="cv">
-      <h2>CV</h2>
-      <p>My full curriculum vitae will be available here.</p>
-      <a class="button" href="#" target="_blank">Download CV</a>
-    </section>
+      <h3>Affiliations</h3>
+      <p class="small">Department of Special Education</p>
+      <p class="small">Vanderbilt University</p>
+    </aside>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:andrew.e.chang@vanderbilt.edu">andrew.e.chang@vanderbilt.edu</a></p>
-    </section>
+    <main class="main">
+
+      <section id="news">
+        <h2>News</h2>
+        <div class="card">
+          <p>Recent updates, presentations, publications, and professional activities will be listed here.</p>
+        </div>
+      </section>
+
+      <section id="research">
+        <h2>Research</h2>
+        <div class="card">
+          <h3>Language and Literacy Development</h3>
+          <p>
+            I examine how early language and literacy skills support later academic achievement,
+            particularly in reading and related school-based outcomes.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Reading Interventions</h3>
+          <p>
+            My work investigates the effectiveness, implementation, and sustainability of reading
+            interventions in authentic school settings.
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Meta-Analysis and Evidence Synthesis</h3>
+          <p>
+            I use systematic review and meta-analytic methods to synthesize research evidence and
+            support translation from research to practice.
+          </p>
+        </div>
+      </section>
+
+      <section id="publications">
+        <h2>Publications</h2>
+        <div class="card">
+          <p>
+            Chang, A., & Mauer, E. (2024). Five recommendations to implementing cross-age tutoring in reading.
+            <em>The Reading Teacher</em>.
+          </p>
+        </div>
+        <div class="card">
+          <p>Additional publications will be added here.</p>
+        </div>
+      </section>
+
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <ul>
+          <li>Teaching Reading to Students with Severe and Persistent Academic and Behavioral Difficulties</li>
+          <li>Applied Meta-Analysis</li>
+          <li>Introduction to Educational Statistics</li>
+        </ul>
+      </section>
+
+      <section id="service">
+        <h2>Service</h2>
+        <p>Professional service, reviewing, and leadership activities will be added here.</p>
+      </section>
+
+      <section id="cv">
+        <h2>Curriculum Vitae</h2>
+        <p>My full CV will be available here.</p>
+        <div class="hero-buttons">
+          <a href="#" target="_blank">Download CV</a>
+        </div>
+      </section>
+
+      <footer>
+        Andrew Chang | GitHub Pages academic profile
+      </footer>
+
+    </main>
 
   </div>
-
-</div>
 
 </body>
 </html>
