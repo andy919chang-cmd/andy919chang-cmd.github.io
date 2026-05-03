@@ -446,6 +446,12 @@
       color: #777;
     }
 
+    .featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
     @media (max-width: 900px) {
       .top-grid,
       .two-column-section,
@@ -453,6 +459,12 @@
       .scholar-metrics {
         grid-template-columns: 1fr;
       }
+
+      @media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
 
       .topbar,
       .header,
@@ -679,7 +691,8 @@
   <summary>Publications</summary>
 
   <h3>Featured Publications</h3>
-
+  
+  <div class="featured-grid"> 
   <div class="card">
     <strong>Cross-age Tutoring Meta-Analysis</strong><br>
     <span class="small">
