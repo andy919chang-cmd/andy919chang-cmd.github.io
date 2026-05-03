@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Dr. Andrew Chang | CV</title>
+
   <style>
     body {
       margin: 0;
@@ -142,6 +143,22 @@
       color: #666;
     }
 
+    .button {
+      display: inline-block;
+      background: #000;
+      color: #CFAE70;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .button:hover {
+      background: #CFAE70;
+      color: #000;
+    }
+
     .card {
       border-left: 4px solid #CFAE70;
       background: #fafafa;
@@ -150,16 +167,29 @@
       border-radius: 8px;
     }
 
-    .publication {
-      margin-bottom: 20px;
+    .edu-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 20px;
+      padding: 16px 0;
+      border-bottom: 1px solid #eee;
     }
 
-    .publication a {
+    .edu-year {
+      color: #9A7611;
+      font-weight: bold;
+    }
+
+    .publication {
+      margin-bottom: 22px;
+    }
+
+    .publication a, .card a {
       color: #7A5C1E;
       text-decoration: none;
     }
 
-    .publication a:hover {
+    .publication a:hover, .card a:hover {
       text-decoration: underline;
     }
 
@@ -190,6 +220,7 @@
 <div class="header">
   <h1>Dr. Andrew Chang</h1>
   <div class="nav">
+    <a href="#news">News</a>
     <a href="#education">Education</a>
     <a href="#publications">Publications</a>
     <a href="#teaching">Teaching</a>
@@ -201,9 +232,9 @@
 <section class="hero">
   <h2>Dr. Andrew Chang</h2>
   <p>
-    Researcher in special education focusing on language and literacy development,
-    reading interventions, culturally and linguistically responsive literacy instruction,
-    teacher preparation, and evidence-based instructional practices.
+    Special education researcher focused on language and literacy development,
+    reading interventions, and research synthesis to inform evidence-based instruction
+    for students with diverse learning needs.
   </p>
 
   <div class="stats">
@@ -212,16 +243,16 @@
       <div class="stat-label">Published Works</div>
     </div>
     <div class="stat">
+      <div class="stat-number">20+</div>
+      <div class="stat-label">Presentations</div>
+    </div>
+    <div class="stat">
       <div class="stat-number">6</div>
       <div class="stat-label">Honors and Awards</div>
     </div>
     <div class="stat">
       <div class="stat-number">4</div>
       <div class="stat-label">Academic Teaching Roles</div>
-    </div>
-    <div class="stat">
-      <div class="stat-number">3</div>
-      <div class="stat-label">Degrees</div>
     </div>
   </div>
 </section>
@@ -239,49 +270,50 @@
   <a href="mailto:andrew.e.chang@vanderbilt.edu">Email</a>
   <a href="https://scholar.google.com/citations?user=6yqKw8sAAAAJ&hl=ko&oi=sra" target="_blank">Google Scholar</a>
   <a href="https://orcid.org/0009-0003-1441-1310" target="_blank">ORCID</a>
-
-  <h3>Research Interests</h3>
-  <ul class="small">
-    <li>Language and literacy development</li>
-    <li>Reading instruction and intervention</li>
-    <li>Culturally and linguistically responsive literacy</li>
-    <li>Teacher preparation and clinical practice</li>
-    <li>Evidence-based practices</li>
-    <li>Meta-analysis and research synthesis</li>
-  </ul>
-
-  <h3>Languages</h3>
-  <ul class="small">
-    <li>Korean</li>
-    <li>English</li>
-    <li>Korean Sign Language</li>
-    <li>American Sign Language</li>
-  </ul>
+  <a href="https://docs.google.com/document/d/1SnRq2FIS5XxKJ90xukAr3j_sYwLCX4vDQIRjLiiCK5g/edit?tab=t.0" target="_blank">CV</a>
 </div>
 
 <div class="main">
 
+<section id="news">
+<h2>News</h2>
+
+<div class="card">
+  <strong>Featured in Tech & Learning</strong><br>
+  Cross-age tutoring was highlighted as an approach in which student tutors support younger students while deepening their own learning.<br>
+  <a href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">Read the article</a>
+</div>
+
+</section>
+
 <section id="education">
 <h2>Education</h2>
 
-<div class="card">
-  <h3>Ph.D. in Special Education</h3>
-  <p>Vanderbilt University, Nashville, TN</p>
-  <p class="small">2022–2026 | Minor: Quantitative Methods</p>
-  <p class="small">Advisor: Dr. Jeanne Wanzek</p>
+<div class="edu-item">
+  <div class="edu-year">2022-2026</div>
+  <div>
+    <strong>Ph.D. in Special Education</strong><br>
+    Vanderbilt University, Nashville, TN<br>
+    <span class="small">Minor: Quantitative Methods | Advisor: Dr. Jeanne Wanzek</span>
+  </div>
 </div>
 
-<div class="card">
-  <h3>M.A. in Educational Psychology</h3>
-  <p>University of Minnesota, Minneapolis, MN</p>
-  <p class="small">2020–2022 | Special Education</p>
-  <p class="small">Advisor: Dr. Debbie Golos</p>
+<div class="edu-item">
+  <div class="edu-year">2020-2022</div>
+  <div>
+    <strong>M.A. in Educational Psychology</strong><br>
+    University of Minnesota, Minneapolis, MN<br>
+    <span class="small">Special Education | Advisor: Dr. Debbie Golos</span>
+  </div>
 </div>
 
-<div class="card">
-  <h3>B.A. in Education</h3>
-  <p>Kookmin University, Seoul, Korea</p>
-  <p class="small">2014–2020 | Joint Major: Morality and Ethics</p>
+<div class="edu-item">
+  <div class="edu-year">2014-2020</div>
+  <div>
+    <strong>B.A. in Education</strong><br>
+    Kookmin University, Seoul, Korea<br>
+    <span class="small">Joint Major: Morality and Ethics</span>
+  </div>
 </div>
 
 </section>
@@ -289,31 +321,31 @@
 <section id="publications">
 <h2>Publications</h2>
 
-<h3>Refereed Peer-Reviewed Journal Articles</h3>
-
 <div class="publication">
-Wanzek, J., & Chang, A. (2025). Exploring intensity in reading interventions for upper elementary students. <em>Mind, Brain and Education</em>. 
+Wanzek, J., & Chang, A. (2025). Exploring intensity in reading interventions for upper elementary students. <em>Mind, Brain and Education</em>.
+<br>
 <a href="https://doi.org/10.1111/mbe.70015" target="_blank">https://doi.org/10.1111/mbe.70015</a>
 </div>
 
 <div class="publication">
-Chang, A., Mauer, E., Wanzek, J., Kim, S., Scammacca, N., & Swanson, E. (2025). Meta-analysis: Examining the academic effects of cross-age tutoring. <em>Educational Psychology Review, 37</em>(19), 1–20. 
+Chang, A., Mauer, E., Wanzek, J., Kim, S., Scammacca, N., & Swanson, E. (2025). Meta-analysis: Examining the academic effects of cross-age tutoring. <em>Educational Psychology Review</em>.
+<br>
 <a href="https://doi.org/10.1007/s10648-025-09997-z" target="_blank">https://doi.org/10.1007/s10648-025-09997-z</a>
 <br>
-<span class="award">Meta-Analysis Student Research Award, CEC Division for Research | Robert Gaylord-Ross Award, Vanderbilt University</span>
+<span class="award">Award-winning paper</span>
 </div>
 
 <div class="publication">
-Chang, A., & Golos, D. (2025). Portrayal of deaf characters in Korean movies. <em>Journal of Deaf Studies and Deaf Education, 30</em>(3), 372–383. 
+Chang, A., & Golos, D. (2025). Portrayal of deaf characters in Korean movies. <em>Journal of Deaf Studies and Deaf Education</em>.
+<br>
 <a href="https://doi.org/10.1093/jdsade/enaf003" target="_blank">https://doi.org/10.1093/jdsade/enaf003</a>
 </div>
 
 <div class="publication">
-Chang, A., & Mauer, E. (2024). Five recommendations to implementing cross-age tutoring in reading. <em>The Reading Teacher, 78</em>(2), 113–120. 
+Chang, A., & Mauer, E. (2024). Five recommendations to implementing cross-age tutoring in reading. <em>The Reading Teacher</em>.
+<br>
 <a href="https://doi.org/10.1002/trtr.2351" target="_blank">https://doi.org/10.1002/trtr.2351</a>
 </div>
-
-<h3>Published Curriculum and Training Manuals</h3>
 
 <div class="publication">
 Chang, A., Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five evidence-based keys to implementing cross-age tutoring</em>. Dallas, TX: Meadows Foundation.
@@ -324,17 +356,23 @@ Chang, A., Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five 
 <section id="teaching">
 <h2>Teaching</h2>
 
-<h3>Instructor</h3>
-<ul>
-  <li>Co-instructor, SPED 7500: Special Topics in Special Education - Applied Meta-Analysis (PhD-level graduate course, in-person), Vanderbilt University, Nashville, TN</li>
-  <li>Co-instructor, SPED 7410: Teaching Reading to Students with Severe and Persistent Academic and Behavioral Difficulties (Master’s-level graduate course, in-person), Vanderbilt University, Nashville, TN</li>
-</ul>
+<div class="card">
+  <strong>Applied Meta-Analysis</strong><br>
+  Vanderbilt University<br>
+  <span class="small">Co-instructor and Teaching Assistant | PhD-level graduate course | In-person</span>
+</div>
 
-<h3>Teaching Assistant</h3>
-<ul>
-  <li>Teaching Assistant, SPED 7500: Special Topics in Special Education - Applied Meta-Analysis (PhD-level graduate course, in-person), Vanderbilt University, Nashville, TN</li>
-  <li>Teaching Assistant, Introduction to Educational Statistics (Undergraduate-level course, online), Kookmin University, Seoul, Korea</li>
-</ul>
+<div class="card">
+  <strong>Teaching Reading to Students with Severe and Persistent Academic and Behavioral Difficulties</strong><br>
+  Vanderbilt University<br>
+  <span class="small">Co-instructor | Master’s-level graduate course | In-person</span>
+</div>
+
+<div class="card">
+  <strong>Introduction to Educational Statistics</strong><br>
+  Kookmin University<br>
+  <span class="small">Teaching Assistant | Undergraduate-level course | Online</span>
+</div>
 
 </section>
 
@@ -342,17 +380,18 @@ Chang, A., Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five 
 <h2>Service</h2>
 
 <ul>
-  <li>President, Korean Researchers in Special Education (2025–present)</li>
-  <li>Student Representative, Korean-American Educational Researchers Association (KAERA) (2024–present)</li>
-  <li>DEIAJ Committee Member, Division for Communication, Language, and d/Deaf and Hard of Hearing (DCD-CEC) (2024–present)</li>
-  <li>Public Relations Chair, Vanderbilt Korean Graduate Students & Scholars Association (KSSA) (2024–2025)</li>
-  <li>Equity, Diversity, and Inclusion Chair, SPED Graduate Students Association, Vanderbilt University (2024–2025)</li>
+  <li>President, Korean Researchers in Special Education (2025-present)</li>
+  <li>Student Representative, Korean-American Educational Researchers Association (KAERA) (2024-present)</li>
+  <li>DEIAJ Committee Member, Division for Communication, Language, and d/Deaf and Hard of Hearing (DCD-CEC) (2024-present)</li>
+  <li>Public Relations Chair, Vanderbilt Korean Graduate Students & Scholars Association (KSSA) (2024-2025)</li>
+  <li>Equity, Diversity, and Inclusion Chair, SPED Graduate Students Association, Vanderbilt University (2024-2025)</li>
 </ul>
 
 </section>
 
 <section id="skills">
 <h2>Skills</h2>
+
 <ul>
   <li>Data analysis software: R, SPSS, SAS, LISREL, Stata, Mplus, JASP</li>
   <li>Qualitative research tools: Trint, NVivo</li>
@@ -361,6 +400,7 @@ Chang, A., Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five 
   <li>Project management</li>
   <li>Research and writing skills</li>
 </ul>
+
 </section>
 
 <footer>
