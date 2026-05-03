@@ -155,20 +155,25 @@
       color: #666;
     }
 
-    .profile-tagline {
-      font-size: 16px;
-      color: #444;
-      margin-top: 12px;
-      margin-bottom: 18px;
+    .contact-inline {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    .contact-item {
-      padding: 12px 0;
-      border-bottom: 1px solid #eee;
+    .contact-inline a {
+      border: 1px solid #CFAE70;
+      border-radius: 20px;
+      padding: 6px 12px;
+      font-size: 14px;
+      color: #7A5C1E;
+      text-decoration: none;
     }
 
-    .contact-item:last-child {
-      border-bottom: none;
+    .contact-inline a:hover {
+      background: #f3efe6;
+      text-decoration: none;
     }
 
     .card {
@@ -389,39 +394,21 @@
       <img src="./profile.jpeg" alt="Dr. Andrew Chang" class="profile-photo">
 
       <h3>Dr. Andrew Chang</h3>
-      <p class="profile-tagline">
-        Language and Literacy Development | Reading Intervention | Research Synthesis
-      </p>
       <p class="small">Ph.D. in Special Education | Quantitative Methods Minor</p>
       <p class="small">
         Department of Special Education<br>
         Vanderbilt University
       </p>
-    </div>
 
-    <div class="profile-card">
-      <h2>Contact</h2>
-
-      <div class="contact-item">
-        <a href="mailto:andrew.e.chang@vanderbilt.edu">andrew.e.chang@vanderbilt.edu</a>
-      </div>
-
-      <div class="contact-item">
+      <div class="contact-inline">
+        <a href="mailto:andrew.e.chang@vanderbilt.edu">Email</a>
         <a href="https://scholar.google.com/citations?user=6yqKw8sAAAAJ&hl=ko&oi=sra" target="_blank">Google Scholar</a>
-      </div>
-
-      <div class="contact-item">
         <a href="https://orcid.org/0009-0003-1441-1310" target="_blank">ORCID</a>
-      </div>
-
-      <div class="contact-item">
         <a href="https://docs.google.com/document/d/1SnRq2FIS5XxKJ90xukAr3j_sYwLCX4vDQIRjLiiCK5g/edit" target="_blank">Curriculum Vitae</a>
       </div>
     </div>
-  </section>
 
-  <section class="two-column-section" id="expertise">
-    <div class="profile-card">
+    <div class="profile-card" id="expertise">
       <h2>Research Expertise</h2>
 
       <div class="expertise-item">Language and literacy development</div>
@@ -430,19 +417,6 @@
       <div class="expertise-item">Teacher preparation and clinical practice</div>
       <div class="expertise-item">Evidence-based practices</div>
       <div class="expertise-item">Meta-analysis and research synthesis</div>
-    </div>
-
-    <div class="profile-card" id="affiliations">
-      <h2>Affiliations</h2>
-
-      <div class="affiliation-chips">
-        <a href="https://www.aera.net/" target="_blank">AERA</a>
-        <a href="https://acedhh.com/" target="_blank">ACE-DHH</a>
-        <a href="https://exceptionalchildren.org/" target="_blank">CEC</a>
-        <a href="https://www.srsm.org/" target="_blank">SRSM</a>
-        <a href="https://kaera.org/" target="_blank">KAERA</a>
-        <a href="https://www.sree.org/" target="_blank">SREE</a>
-      </div>
     </div>
   </section>
 
@@ -487,16 +461,29 @@
       </div>
     </div>
 
-    <div class="profile-card">
-      <h2>Selected Honors</h2>
+    <div class="profile-card" id="affiliations">
+      <h2>Affiliations</h2>
 
-      <div class="honor-item">Melvyn I. Semmel Dissertation Research Award, Vanderbilt University (2026)</div>
-      <div class="honor-item">Taylor & Francis Award, Society for the Scientific Study of Reading (2025)</div>
-      <div class="honor-item">Robert Gaylord-Ross Award, Department of Special Education, Vanderbilt University (2025)</div>
-      <div class="honor-item">Michael B. Salwen Scholarship, Korean-American Educational Researchers Association (2025)</div>
-      <div class="honor-item">Meta-Analysis Student Research Award, Council for Exceptional Children Division for Research (2025)</div>
-      <div class="honor-item">Peabody College Fellowship, Vanderbilt University (2022-2026)</div>
+      <div class="affiliation-chips">
+        <a href="https://www.aera.net/" target="_blank">AERA</a>
+        <a href="https://acedhh.com/" target="_blank">ACE-DHH</a>
+        <a href="https://exceptionalchildren.org/" target="_blank">CEC</a>
+        <a href="https://www.srsm.org/" target="_blank">SRSM</a>
+        <a href="https://kaera.org/" target="_blank">KAERA</a>
+        <a href="https://www.sree.org/" target="_blank">SREE</a>
+      </div>
     </div>
+  </section>
+
+  <section>
+    <h2>Selected Honors</h2>
+
+    <div class="honor-item">Melvyn I. Semmel Dissertation Research Award, Vanderbilt University (2026)</div>
+    <div class="honor-item">Taylor & Francis Award, Society for the Scientific Study of Reading (2025)</div>
+    <div class="honor-item">Robert Gaylord-Ross Award, Department of Special Education, Vanderbilt University (2025)</div>
+    <div class="honor-item">Michael B. Salwen Scholarship, Korean-American Educational Researchers Association (2025)</div>
+    <div class="honor-item">Meta-Analysis Student Research Award, Council for Exceptional Children Division for Research (2025)</div>
+    <div class="honor-item">Peabody College Fellowship, Vanderbilt University (2022-2026)</div>
   </section>
 
   <section id="news">
