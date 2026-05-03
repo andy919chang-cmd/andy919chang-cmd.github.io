@@ -102,24 +102,24 @@
       grid-template-columns: 1fr 1fr;
       gap: 28px;
       margin-bottom: 40px;
+      align-items: start;
     }
 
-    .profile-card,
-    .main-card {
+    .profile-card {
       background: white;
       border-radius: 12px;
-      padding: 28px;
+      padding: 24px;
       box-shadow: 0 6px 20px rgba(0,0,0,0.05);
       border-top: 5px solid #CFAE70;
     }
 
     .profile-photo {
-      width: 260px;
-      height: 320px;
+      width: 220px;
+      height: 270px;
       object-fit: cover;
       object-position: center top;
       border-radius: 12px;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
       max-width: 100%;
     }
 
@@ -130,8 +130,7 @@
       color: #000;
     }
 
-    .profile-card h2,
-    .main-card h2 {
+    .profile-card h2 {
       margin-top: 0;
       border-bottom: none;
       padding-bottom: 0;
@@ -157,7 +156,7 @@
     }
 
     .contact-item {
-      padding: 14px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #eee;
     }
 
@@ -191,6 +190,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 20px;
     }
 
     details summary::-webkit-details-marker {
@@ -236,12 +236,14 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .affiliation-logo img {
-      max-width: 54px;
-      max-height: 54px;
+      width: 54px;
+      height: 54px;
       object-fit: contain;
+      display: block;
     }
 
     .affiliation-name {
@@ -313,6 +315,38 @@
     .award {
       color: #9A7611;
       font-size: 14px;
+    }
+
+    .news-card {
+      display: block;
+      background: white;
+      border-left: 4px solid #CFAE70;
+      border-radius: 10px;
+      padding: 20px;
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.04);
+      margin-bottom: 30px;
+    }
+
+    .news-card:hover {
+      background: #fffaf0;
+      text-decoration: none;
+    }
+
+    .news-source {
+      color: #9A7611;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .news-card h3 {
+      margin: 8px 0;
+    }
+
+    .news-card p {
+      margin: 0 0 10px 0;
+      color: #555;
     }
 
     ul {
@@ -394,12 +428,10 @@
 
   <section class="top-grid">
     <div class="profile-card">
-      <img src="profile.jpeg" alt="Dr. Andrew Chang" class="profile-photo">
+      <img src="./profile.jpeg" alt="Dr. Andrew Chang" class="profile-photo">
 
       <h3>Dr. Andrew Chang</h3>
-      <p>Ph.D. in Special Education</p>
-      <p class="small">Minor: Quantitative Methods</p>
-
+      <p class="small">Ph.D. in Special Education | Quantitative Methods Minor</p>
       <p class="small">
         Department of Special Education<br>
         Vanderbilt University
@@ -443,7 +475,7 @@
       <summary>Affiliations</summary>
 
       <a class="affiliation-item" href="https://www.aera.net/" target="_blank">
-        <div class="affiliation-logo"><img src="aera.jpeg" alt="AERA"></div>
+        <div class="affiliation-logo"><img src="./aera.jpeg" alt="AERA logo"></div>
         <div>
           <div class="affiliation-name">American Educational Research Association</div>
           <div class="small">Division C: Learning and Instruction</div>
@@ -451,7 +483,7 @@
       </a>
 
       <a class="affiliation-item" href="https://acedhh.com/" target="_blank">
-        <div class="affiliation-logo"><img src="acedhh.webp" alt="ACE-DHH"></div>
+        <div class="affiliation-logo"><img src="./acedhh.webp" alt="ACE-DHH logo"></div>
         <div>
           <div class="affiliation-name">American College Educators for Deaf and Hard of Hearing</div>
           <div class="small">Professional Association</div>
@@ -459,7 +491,7 @@
       </a>
 
       <a class="affiliation-item" href="https://exceptionalchildren.org/" target="_blank">
-        <div class="affiliation-logo"><img src="cec.png" alt="CEC"></div>
+        <div class="affiliation-logo"><img src="./cec.png" alt="CEC logo"></div>
         <div>
           <div class="affiliation-name">Council for Exceptional Children</div>
           <div class="small">Professional Association</div>
@@ -467,7 +499,7 @@
       </a>
 
       <a class="affiliation-item" href="https://www.srsm.org/" target="_blank">
-        <div class="affiliation-logo"><img src="srsm.png" alt="SRSM"></div>
+        <div class="affiliation-logo"><img src="./srsm.png" alt="SRSM logo"></div>
         <div>
           <div class="affiliation-name">Society for Research Synthesis Methodology</div>
           <div class="small">Scholarly Society</div>
@@ -475,7 +507,7 @@
       </a>
 
       <a class="affiliation-item" href="https://kaera.org/" target="_blank">
-        <div class="affiliation-logo"><img src="kaera.png" alt="KAERA"></div>
+        <div class="affiliation-logo"><img src="./kaera.png" alt="KAERA logo"></div>
         <div>
           <div class="affiliation-name">Korean-American Educational Researchers Association</div>
           <div class="small">Scholarly Association</div>
@@ -483,7 +515,7 @@
       </a>
 
       <a class="affiliation-item" href="https://www.sree.org/" target="_blank">
-        <div class="affiliation-logo"><img src="sree.webp" alt="SREE"></div>
+        <div class="affiliation-logo"><img src="./sree.webp" alt="SREE logo"></div>
         <div>
           <div class="affiliation-name">Society for Research on Educational Effectiveness</div>
           <div class="small">Research Society</div>
@@ -498,7 +530,7 @@
 
       <div class="timeline-item">
         <div class="edu-logo-box">
-          <img src="vanderbilt.png" alt="Vanderbilt University" class="edu-logo">
+          <img src="./vanderbilt.png" alt="Vanderbilt University" class="edu-logo">
         </div>
         <div>
           <div class="year">2022-2026</div>
@@ -510,7 +542,7 @@
 
       <div class="timeline-item">
         <div class="edu-logo-box">
-          <img src="umn.png" alt="University of Minnesota" class="edu-logo">
+          <img src="./umn.png" alt="University of Minnesota" class="edu-logo">
         </div>
         <div>
           <div class="year">2020-2022</div>
@@ -522,7 +554,7 @@
 
       <div class="timeline-item">
         <div class="edu-logo-box">
-          <img src="kookmin.svg" alt="Kookmin University" class="edu-logo">
+          <img src="./kookmin.svg" alt="Kookmin University" class="edu-logo">
         </div>
         <div>
           <div class="year">2014-2020</div>
@@ -578,10 +610,15 @@
   <section id="news">
     <h2>In the News</h2>
 
-    <div class="publication">
-      <strong>Tech & Learning</strong> — Cross-age tutoring highlighted as an approach where student tutors learn by teaching others.
-      <a href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">[Read]</a>
-    </div>
+    <a class="news-card" href="https://www.techlearning.com/news/cross-age-tutoring-student-tutors-teach-others-and-themselves" target="_blank">
+      <div class="news-source">Tech & Learning</div>
+      <h3>Cross-Age Tutoring: Student Tutors Teach Others and Themselves</h3>
+      <p>
+        A feature article highlighting how cross-age tutoring can support younger students
+        while also helping student tutors deepen their own learning.
+      </p>
+      <span>Read article →</span>
+    </a>
   </section>
 
   <section id="teaching">
