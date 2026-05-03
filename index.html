@@ -311,6 +311,55 @@
       color: #555;
     }
 
+    .scholar-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .metric-card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .metric-number {
+      font-size: 26px;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .metric-label {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .metric-note {
+      margin-top: 10px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    .profile-card,
+    .card,
+    .news-card,
+    .stat,
+    .metric-card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .profile-card:hover,
+    .card:hover,
+    .news-card:hover,
+    .stat:hover,
+    .metric-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
     ul {
       padding-left: 20px;
     }
@@ -325,7 +374,8 @@
     @media (max-width: 900px) {
       .top-grid,
       .two-column-section,
-      .stats {
+      .stats,
+      .scholar-metrics {
         grid-template-columns: 1fr;
       }
 
@@ -352,6 +402,7 @@
     <a href="#education">Education</a>
     <a href="#news">News</a>
     <a href="#publications">Publications</a>
+    <a href="#metrics">Metrics</a>
     <a href="#teaching">Teaching</a>
     <a href="#service">Service</a>
     <a href="#skills">Skills</a>
@@ -514,6 +565,31 @@
     <div class="publication">
       <strong>Chang, A.</strong>, Wanzek, J., Mauer, E., Swanson, E. A., & Vaughn, S. (2023). <em>Five evidence-based keys to implementing cross-age tutoring</em>. Dallas, TX: Meadows Foundation.
       <a href="https://meadowscenter.org/resource/five-evidence-based-keys-to-implementing-cross-age-tutoring/" target="_blank">[Link]</a>
+    </div>
+  </section>
+
+  <section id="metrics">
+    <h2>Google Scholar Metrics</h2>
+
+    <div class="scholar-metrics">
+      <div class="metric-card">
+        <div class="metric-number">13</div>
+        <div class="metric-label">Citations</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-number">2</div>
+        <div class="metric-label">h-index</div>
+      </div>
+
+      <div class="metric-card">
+        <div class="metric-number">1</div>
+        <div class="metric-label">i10-index</div>
+      </div>
+    </div>
+
+    <div class="metric-note">
+      Metrics are manually updated from Google Scholar.
     </div>
   </section>
 
