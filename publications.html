@@ -122,6 +122,34 @@
       font-size: 14px;
       color: #666;
     }
+
+    .numbered-list {
+  counter-reset: item;
+}
+
+.numbered-list .publication {
+  counter-increment: item;
+  margin-bottom: 16px;
+}
+
+.numbered-list .publication::before {
+  content: counter(item) ". ";
+  font-weight: bold;
+  color: #9A7611;
+  margin-right: 6px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 </head>
 
@@ -148,6 +176,8 @@
 <div class="page">
 
   <h2>Published Articles</h2>
+
+  <div class="numbered-list">
 
   <div class="publication">
     Wanzek, J., & <strong>Chang, A.</strong> (2025).
@@ -196,6 +226,8 @@
 
   <h2>Manuscripts Under Review</h2>
 
+  <div class="numbered-list">
+
   <div class="publication">
     Vaughn, S., Mauer, E., Swanson, E., Shanahan, E., <strong>Chang, A.</strong>, & Wanzek, J. (submitted and in revision).
     Tutoring young children with reading difficulties: Perceptions of child and adult tutors.
@@ -243,44 +275,81 @@
 
   <h2>Detailed View of Selected Publications</h2>
 
+<div class="featured-grid">
+
+  <!-- 1 -->
+  <a href="./paper-intensity.html" class="card">
+    <h3>
+      Exploring intensity in reading interventions for upper elementary students
+    </h3>
+
+    <p class="small">
+      Wanzek, J., & Chang, A. (2025).
+      <em>Mind, Brain and Education, 19</em>(4), 326–334.
+    </p>
+
+    <p>
+      Examines how instructional intensity influences reading outcomes for upper elementary students with reading difficulties.
+    </p>
+
+    <p><strong>Read details →</strong></p>
+  </a>
+
+  <!-- 2 -->
   <a href="./paper-cross-age.html" class="card">
-    <h3>Cross-Age Tutoring Meta-Analysis</h3>
+    <h3>
+      Meta-analysis: Examining the academic effects of cross-age tutoring
+    </h3>
 
     <p class="small">
       Chang, A., Mauer, E., Wanzek, J., Kim, S., Scammacca, N., & Swanson, E. (2025).
-      Meta-analysis: Examining the academic effects of cross-age tutoring.
-      <em>Educational Psychology Review</em>.
+      <em>Educational Psychology Review, 37</em>(19), 1–20.
     </p>
 
     <span class="award-badge">CEC Division for Research Award</span>
     <span class="award-badge">Robert Gaylord-Ross Award</span>
 
     <p>
-      This meta-analysis examines the academic effects of cross-age tutoring across diverse educational settings.
-      Findings highlight its effectiveness as a scalable intervention that benefits both tutors and tutees.
+      Examines the academic effects of cross-age tutoring across diverse educational settings.
     </p>
 
     <p><strong>Read details →</strong></p>
   </a>
 
-  <a href="./paper-intensity.html" class="card">
-    <h3>Reading Intervention Intensity</h3>
+  <!-- 3 -->
+  <a href="./paper-deaf.html" class="card">
+    <h3>
+      Portrayal of deaf characters in Korean movies
+    </h3>
 
     <p class="small">
-      Wanzek, J., & Chang, A. (2025).
-      Exploring intensity in reading interventions for upper elementary students.
-      <em>Mind, Brain and Education</em>.
+      Chang, A., & Golos, D. (2025).
+      <em>Journal of Deaf Studies and Deaf Education, 30</em>(3), 372–383.
     </p>
 
     <p>
-      This study examines how instructional intensity influences reading outcomes for upper elementary students
-      with reading difficulties, highlighting the importance of dosage and instructional design.
+      Examines representation of deaf characters in Korean media and implications for identity and inclusion.
+    </p>
+
+    <p><strong>Read details →</strong></p>
+  </a>
+
+  <!-- 4 -->
+  <a href="./paper-reading-teacher.html" class="card">
+    <h3>
+      Five recommendations to implementing cross-age tutoring in reading
+    </h3>
+
+    <p class="small">
+      Chang, A., & Mauer, E. (2024).
+      <em>The Reading Teacher, 78</em>(2), 113–120.
+    </p>
+
+    <p>
+      Provides practical recommendations for implementing cross-age tutoring in classroom settings.
     </p>
 
     <p><strong>Read details →</strong></p>
   </a>
 
 </div>
-
-</body>
-</html>
