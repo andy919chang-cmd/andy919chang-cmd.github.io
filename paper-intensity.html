@@ -24,11 +24,26 @@
       border-bottom: 1px solid #ddd;
     }
 
+    .header h1 {
+      margin: 0;
+      font-size: 30px;
+      color: #000;
+    }
+
+    .nav {
+      margin-top: 18px;
+    }
+
     .nav a {
       margin-right: 20px;
       text-decoration: none;
       color: #333;
       font-weight: 600;
+      font-size: 14px;
+    }
+
+    .nav a:hover {
+      color: #CFAE70;
     }
 
     .hero {
@@ -40,6 +55,7 @@
       font-size: 32px;
       margin: 0;
       max-width: 900px;
+      line-height: 1.2;
     }
 
     .page {
@@ -58,7 +74,9 @@
     }
 
     .paper-intro h2 {
+      border-bottom: none;
       margin-top: 6px;
+      padding-bottom: 0;
       font-size: 32px;
       line-height: 1.2;
     }
@@ -67,7 +85,9 @@
       color: #9A7611;
       font-weight: 700;
       font-size: 13px;
+      letter-spacing: 0.5px;
       text-transform: uppercase;
+      margin: 0;
     }
 
     .citation {
@@ -87,6 +107,7 @@
 
     .button-link:hover {
       background: #f3efe6;
+      text-decoration: none;
     }
 
     .highlight-card,
@@ -102,7 +123,9 @@
       margin-bottom: 32px;
     }
 
-    .content-section h3 {
+    .content-section h3,
+    .highlight-card h3,
+    .takeaway-card h3 {
       margin-top: 0;
       color: #000;
     }
@@ -120,20 +143,25 @@
       padding: 20px;
     }
 
-    .finding-card .number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 44px;
-      height: 30px;
-      border-radius: 20px;
-      background: #CFAE70;
+    .study-label {
+      display: inline-block;
+      color: #9A7611;
       font-weight: 700;
-      margin-bottom: 8px;
+      font-size: 13px;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
     }
 
     .finding-card h4 {
-      margin: 4px 0 8px 0;
+      margin: 4px 0 10px 0;
+      color: #000;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    .finding-card p {
+      margin-bottom: 0;
     }
 
     .small {
@@ -144,6 +172,14 @@
     @media (max-width: 768px) {
       .finding-grid {
         grid-template-columns: 1fr;
+      }
+
+      .paper-intro h2 {
+        font-size: 26px;
+      }
+
+      .hero h2 {
+        font-size: 26px;
       }
     }
   </style>
@@ -176,75 +212,75 @@
     <p class="label">Research Synthesis</p>
     <h2>Exploring Intensity in Reading Interventions for Upper Elementary Students</h2>
     <p class="citation">
-      Wanzek, J., & Chang, A. (2025). <em>Mind, Brain, and Education</em>
+      Wanzek, J., & Chang, A. (2025). <em>Mind, Brain, and Education, 19</em>(4), 326–334.
     </p>
 
-    <a href="#" class="button-link">
-      View article →
+    <a href="https://doi.org/10.1111/mbe.70015" target="_blank" class="button-link">
+      Read full article →
     </a>
   </section>
 
   <div class="highlight-card">
     <h3>Main Idea</h3>
     <p>
-      Older students with reading disabilities need more than standard instruction. This paper examines how increasing the intensity of reading interventions affects learning outcomes in upper elementary students.
+      Upper elementary students with reading disabilities often need more intensive support than standard reading instruction can provide. This paper reviews three studies to examine how different levels and types of intervention intensity relate to reading outcomes.
     </p>
   </div>
 
   <section class="content-section">
     <h3>Why this study matters</h3>
     <p>
-      By upper elementary school, struggling readers are expected to learn from text, not just learn how to read. However, many students still have gaps in foundational skills such as decoding, fluency, and comprehension strategies.  [oai_citation:0‡Mind Brain and Education - 2025 - Wanzek - Exploring Intensity in Reading Interventions for Upper Elementary Students.pdf](sediment://file_0000000081e871f5b5994ea4e44e058e)
+      By upper elementary school, students are expected to learn from increasingly complex texts across subject areas. For students with reading disabilities, this creates a serious challenge because many still need support with foundational skills such as word reading, fluency, and comprehension strategies.
     </p>
     <p>
-      Traditional classroom instruction often does not address these gaps, making targeted and intensive intervention critical for helping these students catch up.
+      The central question is not simply whether intervention works, but what kind of intensity is needed to accelerate reading growth for older struggling readers.
     </p>
   </section>
 
   <section class="content-section">
     <h3>What does “intensity” mean?</h3>
     <p>
-      Intervention intensity is not just about doing more of the same. It includes increasing instructional time, reducing group size, adding components, and delivering more explicit and targeted instruction.
+      Intervention intensity is not just about doing more of the same. It can include increasing instructional time, reducing group size, adding intervention components, and providing more explicit, targeted instruction.
     </p>
     <p>
-      However, research shows that simply increasing time or group size does not always lead to stronger outcomes for older students, highlighting the need to rethink how interventions are intensified.  [oai_citation:1‡Mind Brain and Education - 2025 - Wanzek - Exploring Intensity in Reading Interventions for Upper Elementary Students.pdf](sediment://file_0000000081e871f5b5994ea4e44e058e)
+      For older students with reading disabilities, simply increasing time or reducing group size may not be enough. The design of the intervention matters.
     </p>
   </section>
 
   <section class="content-section">
-    <h3>Key findings across three studies</h3>
+    <h3>What we learned about intervention intensity</h3>
 
     <div class="finding-grid">
 
       <div class="finding-card">
-        <span class="number">Study 1</span>
+        <span class="study-label">Study 1</span>
         <h4>Less intensive intervention</h4>
         <p>
-          Moderate gains in reading comprehension, especially for students with stronger baseline skills.
+          A less intensive intervention led to moderate gains in reading comprehension, particularly for students who began with stronger word reading skills.
         </p>
       </div>
 
       <div class="finding-card">
-        <span class="number">Study 2</span>
+        <span class="study-label">Study 2</span>
         <h4>More intensive intervention</h4>
         <p>
-          Improved word reading accuracy and fluency, but limited effects on comprehension.
+          A more intensive intervention improved word reading accuracy and fluency for students with more significant reading difficulties, but did not produce the same gains in comprehension.
         </p>
       </div>
 
       <div class="finding-card">
-        <span class="number">Study 3</span>
-        <h4>Reading + mindset intervention</h4>
+        <span class="study-label">Study 3</span>
+        <h4>Reading intervention plus mindset support</h4>
         <p>
-          Small gains in decoding skills, but no added benefit from mindset training.
+          Adding a growth mindset intervention produced small effects on nonword reading, but did not add clear benefits for reading comprehension or mindset development.
         </p>
       </div>
 
       <div class="finding-card">
-        <span class="number">Overall</span>
-        <h4>Intensity matters</h4>
+        <span class="study-label">Overall</span>
+        <h4>Intensity is necessary but not sufficient</h4>
         <p>
-          Students with more severe difficulties require more intensive intervention to make progress.
+          Students with more severe reading difficulties need intensive intervention, but intensity must be strategically designed to address their specific learning needs.
         </p>
       </div>
 
@@ -254,37 +290,34 @@
   <section class="content-section">
     <h3>What did we learn?</h3>
     <p>
-      Increasing intensity helped students improve foundational skills such as word reading, but did not immediately translate into gains in reading comprehension.
+      Across the three studies, intensive reading intervention helped students make progress, especially in foundational skills such as word reading. However, gains in foundational skills did not always translate immediately into stronger reading comprehension.
     </p>
     <p>
-      This suggests that comprehension growth may require longer intervention duration or reaching a certain threshold of decoding ability before improvement occurs.
+      This suggests that some students may need sustained support over a longer period before improvements in word reading lead to broader comprehension gains.
     </p>
   </section>
 
   <section class="content-section">
     <h3>What about mindset?</h3>
     <p>
-      Adding a growth mindset intervention did not lead to additional academic gains. The reading intervention itself was the primary driver of improvement.
-    </p>
-    <p>
-      This indicates that while motivation and beliefs may matter, they are not sufficient on their own without strong, explicit academic instruction.
+      The study that combined reading instruction with mindset training did not show added academic benefits beyond the reading intervention itself. This does not mean motivation is unimportant, but it suggests that mindset supports may need to be more directly connected to students’ reading challenges and daily instructional work.
     </p>
   </section>
 
   <section class="content-section">
     <h3>Implications for practice</h3>
     <p>
-      Effective intervention for older struggling readers requires more than increasing time. It requires careful design, explicit instruction, and alignment with students’ specific needs.
+      Effective intervention for older struggling readers requires careful planning. Increasing intensity should involve more than adding minutes. It should include explicit instruction, consistent practice, targeted feedback, and alignment with students’ specific reading needs.
     </p>
     <p>
-      Even with intensive intervention, students often do not reach grade-level performance within one year, highlighting the need for sustained and possibly multi-year support.
+      Even with intensive support, many upper elementary students with reading disabilities may need continued intervention beyond a single school year.
     </p>
   </section>
 
   <div class="takeaway-card">
     <h3>Takeaway</h3>
     <p>
-      Intensity is necessary but not sufficient. To truly accelerate reading outcomes for older struggling readers, interventions must be both intensive and strategically designed.
+      Reading intervention intensity matters, but intensity alone is not the solution. Older struggling readers need interventions that are sustained, explicit, targeted, and carefully matched to the skills they still need to develop.
     </p>
   </div>
 
