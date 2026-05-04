@@ -1,0 +1,108 @@
+.paper-intro {
+  background: white;
+  border-top: 5px solid #CFAE70;
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  margin-bottom: 28px;
+}
+
+.paper-intro h2 {
+  border-bottom: none;
+  margin-top: 6px;
+  padding-bottom: 0;
+  font-size: 32px;
+  line-height: 1.2;
+}
+
+.label {
+  color: #9A7611;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.citation {
+  color: #555;
+}
+
+.button-link {
+  display: inline-block;
+  margin-top: 8px;
+  border: 1px solid #CFAE70;
+  border-radius: 24px;
+  padding: 8px 14px;
+  font-weight: 600;
+}
+
+.button-link:hover {
+  background: #f3efe6;
+  text-decoration: none;
+}
+
+.highlight-card,
+.takeaway-card {
+  border-left: 5px solid #CFAE70;
+  background: #fffaf0;
+  padding: 22px;
+  border-radius: 10px;
+  margin-bottom: 28px;
+}
+
+.content-section {
+  margin-bottom: 32px;
+}
+
+.content-section h3,
+.highlight-card h3,
+.takeaway-card h3 {
+  margin-top: 0;
+  color: #000;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.recommendation-card {
+  background: white;
+  border: 1px solid #e5dccb;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.recommendation-card .number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #CFAE70;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.recommendation-card h4 {
+  margin: 4px 0 8px 0;
+  color: #000;
+}
+
+.recommendation-card p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .paper-intro h2 {
+    font-size: 26px;
+  }
+}
