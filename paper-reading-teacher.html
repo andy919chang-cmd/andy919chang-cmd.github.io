@@ -1,108 +1,273 @@
-.paper-intro {
-  background: white;
-  border-top: 5px solid #CFAE70;
-  border-radius: 12px;
-  padding: 28px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-  margin-bottom: 28px;
-}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Five recommendations to implementing cross-age tutoring in reading | Dr. Andrew Chang</title>
 
-.paper-intro h2 {
-  border-bottom: none;
-  margin-top: 6px;
-  padding-bottom: 0;
-  font-size: 32px;
-  line-height: 1.2;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f9fb;
+      color: #1f2933;
+      line-height: 1.7;
+    }
 
-.label {
-  color: #9A7611;
-  font-weight: 700;
-  font-size: 13px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin: 0;
-}
+    .topbar {
+      background: #000;
+      color: #CFAE70;
+      padding: 14px 60px;
+    }
 
-.citation {
-  color: #555;
-}
+    .header {
+      background: white;
+      padding: 28px 60px;
+      border-bottom: 1px solid #ddd;
+    }
 
-.button-link {
-  display: inline-block;
-  margin-top: 8px;
-  border: 1px solid #CFAE70;
-  border-radius: 24px;
-  padding: 8px 14px;
-  font-weight: 600;
-}
+    .nav a {
+      margin-right: 20px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+    }
 
-.button-link:hover {
-  background: #f3efe6;
-  text-decoration: none;
-}
+    .hero {
+      background: #f3efe6;
+      padding: 50px 60px;
+    }
 
-.highlight-card,
-.takeaway-card {
-  border-left: 5px solid #CFAE70;
-  background: #fffaf0;
-  padding: 22px;
-  border-radius: 10px;
-  margin-bottom: 28px;
-}
+    .hero h2 {
+      font-size: 32px;
+      margin: 0;
+      max-width: 900px;
+    }
 
-.content-section {
-  margin-bottom: 32px;
-}
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
 
-.content-section h3,
-.highlight-card h3,
-.takeaway-card h3 {
-  margin-top: 0;
-  color: #000;
-}
+    .paper-intro {
+      background: white;
+      border-top: 5px solid #CFAE70;
+      border-radius: 12px;
+      padding: 28px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+      margin-bottom: 28px;
+    }
 
-.recommendation-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
+    .paper-intro h2 {
+      border-bottom: none;
+      margin-top: 6px;
+      padding-bottom: 0;
+      font-size: 32px;
+      line-height: 1.2;
+    }
 
-.recommendation-card {
-  background: white;
-  border: 1px solid #e5dccb;
-  border-radius: 12px;
-  padding: 20px;
-}
+    .label {
+      color: #9A7611;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin: 0;
+    }
 
-.recommendation-card .number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: #CFAE70;
-  color: #000;
-  font-weight: 700;
-  margin-bottom: 8px;
-}
+    .citation {
+      color: #555;
+    }
 
-.recommendation-card h4 {
-  margin: 4px 0 8px 0;
-  color: #000;
-}
+    .button-link {
+      display: inline-block;
+      margin-top: 8px;
+      border: 1px solid #CFAE70;
+      border-radius: 24px;
+      padding: 8px 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: #7A5C1E;
+    }
 
-.recommendation-card p {
-  margin-bottom: 0;
-}
+    .button-link:hover {
+      background: #f3efe6;
+    }
 
-@media (max-width: 768px) {
-  .recommendation-grid {
-    grid-template-columns: 1fr;
-  }
+    .highlight-card,
+    .takeaway-card {
+      border-left: 5px solid #CFAE70;
+      background: #fffaf0;
+      padding: 22px;
+      border-radius: 10px;
+      margin-bottom: 28px;
+    }
 
-  .paper-intro h2 {
-    font-size: 26px;
-  }
-}
+    .content-section {
+      margin-bottom: 32px;
+    }
+
+    .content-section h3,
+    .highlight-card h3,
+    .takeaway-card h3 {
+      margin-top: 0;
+      color: #000;
+    }
+
+    .recommendation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .recommendation-card {
+      background: white;
+      border: 1px solid #e5dccb;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .recommendation-card .number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #CFAE70;
+      color: #000;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .recommendation-card h4 {
+      margin: 4px 0 8px 0;
+      color: #000;
+    }
+
+    .recommendation-card p {
+      margin-bottom: 0;
+    }
+
+    .small {
+      font-size: 14px;
+      color: #666;
+    }
+
+    @media (max-width: 768px) {
+      .recommendation-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .paper-intro h2 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="topbar">
+  Vanderbilt University | Special Education
+</div>
+
+<div class="header">
+  <h1>Dr. Andrew Chang</h1>
+  <div class="nav">
+    <a href="./index.html">Home</a>
+    <a href="./publications.html">Publications</a>
+  </div>
+</div>
+
+<section class="hero">
+  <h2>
+    Five recommendations to implementing cross-age tutoring in reading
+  </h2>
+  <p class="small">
+    Chang, A., & Mauer, E. (2024). The Reading Teacher
+  </p>
+</section>
+
+<div class="page">
+
+  <section class="paper-intro">
+    <p class="label">Practitioner Article</p>
+    <h2>Five recommendations to implementing cross-age tutoring in reading</h2>
+    <p class="citation">
+      Chang, A., & Mauer, E. (2024). <em>The Reading Teacher</em>.
+    </p>
+    <a href="https://doi.org/10.1002/trtr.2351" target="_blank" class="button-link">
+      Read full article →
+    </a>
+  </section>
+
+  <div class="highlight-card">
+    <h3>Main Idea</h3>
+    <p>
+      Cross-age tutoring can be a powerful way to support reading development, but simply pairing older and younger students is not enough. Effective tutoring depends on structure, tutor training, motivation, and ongoing support.
+    </p>
+  </div>
+
+  <section class="content-section">
+    <h3>What is cross-age tutoring?</h3>
+    <p>
+      Teaching reading in elementary school is complex. Cross-age tutoring allows older students to support younger students through structured reading activities, benefiting both learners.
+    </p>
+  </section>
+
+  <section class="content-section">
+    <h3>Why doesn’t it always work?</h3>
+    <p>
+      Many tutoring programs fail due to lack of structure, insufficient training, and limited monitoring.
+    </p>
+  </section>
+
+  <section class="content-section">
+    <h3>Five key recommendations</h3>
+
+    <div class="recommendation-grid">
+
+      <div class="recommendation-card">
+        <span class="number">1</span>
+        <h4>Use one-on-one pairings</h4>
+        <p>Maximizes focus and feedback.</p>
+      </div>
+
+      <div class="recommendation-card">
+        <span class="number">2</span>
+        <h4>Provide structured lessons</h4>
+        <p>Use clear instructional routines.</p>
+      </div>
+
+      <div class="recommendation-card">
+        <span class="number">3</span>
+        <h4>Train the tutors</h4>
+        <p>Provide explicit guidance.</p>
+      </div>
+
+      <div class="recommendation-card">
+        <span class="number">4</span>
+        <h4>Support motivation</h4>
+        <p>Encourage engagement and persistence.</p>
+      </div>
+
+      <div class="recommendation-card">
+        <span class="number">5</span>
+        <h4>Monitor implementation</h4>
+        <p>Ensure quality and consistency.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="takeaway-card">
+    <h3>Takeaway</h3>
+    <p>
+      Cross-age tutoring is effective when it is structured, supported, and carefully implemented.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
